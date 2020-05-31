@@ -23,6 +23,9 @@ I have provided a dataset that you will use for this. The dataset and it's descr
 
 The goal of this project is to write a Bash script that does the following:
 1. Counts the number of flights that were delayed more than 15 minutes into or out of Gainesville, FL (airport code GNV) during the timeframe covered by the dataset. (*2 points*)
+
+**Grading: 2pts**
+
 ##
     grep GNV /ufrc/bsc4452/share/Class_Files/data/flights.May2017-Apr2018.csv >> ./GNV.flights
     grep -E '\s\w\w\"\,\"\w{2}\",\"[[:digit:]]*\",[[:digit:]]*\.[[:digit:]]*,1' GNV.flights | wc -l
@@ -91,6 +94,9 @@ Delayed by wether
 0 flights
 
 3. Within a function, print a list of all unique airport codes contained in the dataset. (*3 points*)
+
+**Grading: 3pts. Not a function, but taking off for that in q2.**
+
 ##
     awk -F',' '{print $7}' /ufrc/bsc4452/share/Class_Files/data/flights.May2017-Apr2018.csv >> ./test1/airport.code2
     sort test1/airport.code2 | uniq >> uniq.airport.code2
@@ -99,6 +105,9 @@ Delayed by wether
 Total of 350 airports
 
 4. Within a function list the cities in Florida that have airports in the dataset. (*2 points*)
+
+**Grading: 2pts.**
+
 ##
     awk -F',' '{print $3,$4,$5}' /ufrc/bsc4452/share/Class_Files/data/flights.May2017-Apr2018.csv >> test1/question4
     grep 'FL\"$' test1/question4 | sort | uniq | wc –l
@@ -160,16 +169,16 @@ For question 2, you will receive points for:
 
 Rubric item | Points | Your score
 ------------|--------|-----------
-Using github| 1 point |  ** **
-Having at least one commit from each member of the team | 2 points | ** **
-Using meaningful commit messages | 2 points | ** **
-Using functions correctly | 2 points | ** **
-Using comments in code | 2 points | ** **
-Using spacing to make code readable | 2 points |** **
-Getting the correct answer | 2 points | ** **
-
+Using github| 1 point |  **1**
+Having at least one commit from each member of the team | 2 points | **2--don't see any commits from Mireya, but Ok.**
+Using meaningful commit messages | 2 points | **2--In the future, have more than "update X", what was changed??**
+Using functions correctly | 2 points | **0--no functions**
+Using comments in code | 2 points | **2--no comments, but fairly clear**
+Using spacing to make code readable | 2 points |**2--make better use of spacing**
+Getting the correct answer | 2 points | **2**
+Total for question 2 | 13 | 11
 **Extra credit:**
-
+No extra credit
 
 **Total points:**
- /20
+ 18/20
